@@ -1594,10 +1594,10 @@ public class DroidShows extends ListActivity
 	}
 
 	@Override
-	protected void onStop() {
+	protected void onDestroy() {
 		if (autoBackup && theTVDB == null && asyncInfo.getStatus() != AsyncTask.Status.RUNNING)	// not updating
 			backup(true);
-		super.onStop();
+		super.onDestroy();
 	}
 
 	@Override
